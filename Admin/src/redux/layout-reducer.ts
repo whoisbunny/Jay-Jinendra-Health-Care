@@ -9,16 +9,16 @@ export const layoutSlice = createSlice({
   initialState,
   reducers: {
     // handle dark mode
-    handleDarkMode: (state, action) => {
-      //   state.darkMode = action.payload;
-      //   window.localStorage.setItem("darkMode", action.payload);
-    },
+    // handleDarkMode: (state, action) => {
+    //   //   state.darkMode = action.payload;
+    //   //   window.localStorage.setItem("darkMode", action.payload);
+    // },
     handleModal: (state, action) => {
       state.openEditModal = action.payload;
     },
   },
 });
 
-export const { handleDarkMode ,handleModal} = layoutSlice.actions;
+export const { handleModal } = layoutSlice.actions;
 
 export default layoutSlice.reducer;

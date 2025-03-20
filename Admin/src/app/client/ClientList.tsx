@@ -6,7 +6,7 @@ import React from "react";
 const ClientList = () => {
   return (
     <div >
-      <DataTable columns={columns} data={payments} />
+      <DataTable columns={columns} data={payments} title="All Clients" />
     </div>
   );
 };

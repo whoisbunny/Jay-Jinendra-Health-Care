@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Input } from "./ui/input";
+import { Input } from "../ui/input";
 const GlobalFilter = ({ filter, setFilter }) => {
   const [value, setValue] = useState(filter);
   const onChange = (e) => {

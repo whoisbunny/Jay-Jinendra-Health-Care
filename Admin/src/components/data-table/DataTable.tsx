@@ -1,6 +1,5 @@
 import {
   ColumnDef,
-  ColumnFiltersState,
   flexRender,
   getCoreRowModel,
   getFilteredRowModel,
@@ -20,20 +19,22 @@ import {
 } from "@/components/ui/table";
 import { DataTablePagination } from "./pagination";
 import React, { useState } from "react";
-import GlobalFilter from "../GlobalFilter";
+import GlobalFilter from "./GlobalFilter";
 import { Card, CardHeader } from "../ui/card";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
+  title?: string;
 }
 
 export function DataTable<TData, TValue>({
   columns,
   data,
+  title,
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([]);
-  const [globalFilter, setGlobalFilter] = useState<any>([]);
+  const [globalFilter, setGlobalFilter] = useState([]);
   const table = useReactTable({
     data,
     columns,
@@ -54,9 +55,9 @@ export function DataTable<TData, TValue>({
   });
 
   return (
-    <Card className="" >
-      <CardHeader className="md:flex md:items-center md:justify-between gap-2"> 
-        <h4 className="card-title">All transactions</h4>
+    <Card className="">
+      <CardHeader className="md:flex md:items-center md:justify-between gap-2">
+        <h4 className="card-title">{title}</h4>
         <div className="  ">
           <GlobalFilter
             filter={globalFilter}
