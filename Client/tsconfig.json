@@ -9,6 +9,7 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "jsxImportSource": "react"
+    "jsxImportSource": "react",
+    "noUnusedLocals": false
   }
 }
