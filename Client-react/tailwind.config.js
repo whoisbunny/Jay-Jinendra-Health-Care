@@ -8,6 +8,16 @@ export default {
         primary1: "#1ca39c",
         secondary: "#F2F6F6",
         secondary1: "#6b7280",
+        blackText: "#272b41",
+      },
+      container: {
+        center: true,
+        screens: {
+          sm: "100%",
+          md: "100%",
+          lg: "1160px",
+          xl: "1160px",
+        },
       },
     },
   },

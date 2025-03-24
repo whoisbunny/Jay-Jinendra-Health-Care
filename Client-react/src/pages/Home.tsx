@@ -6,31 +6,31 @@ const Home = () => {
     <div>
       {/* Hero Section */}
 
-      <section className="relative bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-20">
-        <div className="container mx-auto py-6 px-6 flex flex-col md:flex-row items-center">
+      <section className="relative text-secondary1 bg-secondary  pt-20 ">
+        <div className="container mx-auto  px-6 flex flex-col md:flex-row items-center justify-center py-16 ">
           {/* Left Text Content */}
-          <div className="md:w-1/2 text-center md:text-left">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              Welcome to Jai Jinendra Health Care
+          <div className="md:w-1/2  text-center md:text-left">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 ">
+              Welcome to Jay Jinendra Health Care
             </h1>
             <p className="text-lg md:text-xl mb-6">
               Providing trusted and professional caretakers for your loved ones.
             </p>
             <Link
-              to="/book-caregiver"
-              className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition"
+              to="/"
+              className="bg-primary1 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition"
             >
               Book a Caregiver
             </Link>
           </div>
 
           {/* Right Image */}
-          <div className="md:w-1/2 mt-8 md:mt-0 flex justify-center">
-            <img
+          <div className="md:w-1/2 hidden  mt-8 md:mt-0 md:flex justify-center">
+            {/* <img
               src="https://files.oaiusercontent.com/file-GB8MgausFWBqnSyBoiNtnq?se=2025-03-19T19%3A01%3A24Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dad621360-01b9-4991-805c-77d6730a29da.webp&sig=MfdXs7zQAtWSWxBsBjS%2Blp3/9kAnDM3X3BV%2BwWjXg94%3D"
               alt="Caretaker with Elderly Lady"
               className="w-full max-w-md rounded-lg shadow-lg"
-            />
+            /> */}
           </div>
         </div>
       </section>

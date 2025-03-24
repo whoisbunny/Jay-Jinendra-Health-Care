@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 // import LIGO from "../assets/images/P2CARE.png";
 
 import dayjs from "dayjs";
@@ -11,26 +11,20 @@ import {
   Twitter,
   Linkedin,
 } from "lucide-react";
-import LOGO from "@/public/LOGO.png"; // Ensure the image is inside the "public" folder
-import Image from "next/image";
 
 const Footer = () => {
+
+
   return (
     <footer className="bg-secondary text-secondary1 pt-10 pb-5">
       <div className="container px-6 mx-auto ">
         {/* Top Section */}
-        <div className="grid grid-cols-1  md:grid-cols-3 lg:grid-cols-4 gap-8 ">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {/* Logo Section */}
-          <div className="  md:m-auto block ">
-            <Link href="/" prefetch={true}>
+          <div>
+            <Link to="/">
               {/* <img src={LIGO} className="w-40" alt="logo" /> */}
-              <Image
-                src={LOGO}
-                alt="Logo"
-                width={96} // Adjust size as needed
-                height={96}
-                className="h-auto w-24 md:w-24 md:mx-0"
-              />{" "}
+              <h1>Web site</h1>
             </Link>
           </div>
 
@@ -39,26 +33,18 @@ const Footer = () => {
             <h2 className="text-xl font-semibold mb-4 ">Quick Links</h2>
             <ul className="space-y-2">
               <li>
-                <Link
-                  href="/about-jay-jinendra-health-care"
-                  prefetch={true}
-                  className="text-secondary1"
-                >
+                <Link to="/about" className="text-secondary1">
                   About
                 </Link>
               </li>
 
               <li>
-                <Link
-                  href="/our-health-care-services"
-                  prefetch={true}
-                  className="text-secondary1"
-                >
+                <Link to="/service" className="text-secondary1">
                   Service
                 </Link>
               </li>
               <li>
-                <Link href="/blog" prefetch={true} className="text-secondary1">
+                <Link to="/blog" className="text-secondary1">
                   Blog
                 </Link>
               </li>
@@ -97,8 +83,7 @@ const Footer = () => {
               {/* {contact?.instagram && ( */}
               <Link
                 // href={contact.instagram}
-                href={"/"}
-                prefetch={true}
+                to={"/"}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -131,11 +116,11 @@ const Footer = () => {
         <div className="flex justify-between items-center border-t border-gray-300 mt-8 pt-6 text-center text-sm">
           <p>&copy; {dayjs().year()} All Rights Reserved</p>
           <div className="flex justify-center space-x-4 ">
-            <Link href="/privacypolicy" className="text-secondary1 ">
+            <Link to="/privacypolicy" className="text-secondary1 ">
               Privacy Policy
             </Link>
             <span>|</span>
-            <Link href="/termsandconditions" className=" text-secondary1">
+            <Link to="/termsandconditions" className=" text-secondary1">
               Terms and Conditions
             </Link>
           </div>
