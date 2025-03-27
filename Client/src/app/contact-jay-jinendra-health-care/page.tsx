@@ -1,17 +1,9 @@
 import BreadCrum from "@/components/Breadcrumb";
 import { Mails, MapPin, PhoneCallIcon } from "lucide-react";
-import Head from "next/head";
 
 function Contact() {
   return (
     <>
-    <Head>
-      <title>Contact Us - Jay Jinendra Health Care</title>
-      <meta name="description" content="Get in touch with Jay Jinendra Health Care. Contact us for any inquiries or questions you may have about health care, baby care, or elder care." />
-      <meta name="keywords" content="Jay Jinendra Health Care, Contact, Health Care, Baby Care, Elder Care, Inquiries" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    </Head>
-     
       <div className="min-h-screen bg-white ">
         <BreadCrum location={"Contact"} heading={"Contact Us"} />
         <section className="container mx-auto py-12 px-6">

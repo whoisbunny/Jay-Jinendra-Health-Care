@@ -8,18 +8,12 @@ import img1 from "@/public/image/about-img1.jpg";
 import img3 from "@/public/image/about-img3.jpg";
 import icon1 from "@/public/image/icons/phone-icon.svg";
 import FAQ from "@/components/FAQ";
-import Head from "next/head";
 
 const AboutPage: React.FC = () => {
   return (
 
     <>
-    <Head>
-      <title>About Jay Jinendra Health Care</title>
-      <meta name="description" content="Learn more about Jay Jinendra Health Care, our mission, vision, and the services we offer including elder care, baby care, and more to ensure the best care for your loved ones." />
-      <meta name="keywords" content="Jay Jinendra Health Care, patient care, health services, elder care, baby care, about us" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    </Head>
+  
       <div className="min-h-screen bg-white ">
         <Breadcrumb location={"About Jay Jinendra"} heading={"About Us"} />
         <div className="container mx-auto py-12 px-6">

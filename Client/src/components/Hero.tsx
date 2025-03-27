@@ -44,7 +44,7 @@ const Hero = () => {
               Providing trusted and professional caretakers for your loved ones.
             </p>
             <Link
-              href="/"
+              href="/book-caregiver"
               prefetch={true}
               className="btn px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition md:mx-0 mx-auto "
             >

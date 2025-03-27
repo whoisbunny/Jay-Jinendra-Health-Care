@@ -4,11 +4,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --color-primary: "#09e5ab";
-  --color-primary1: "#1ca39c";
-  --color-secondary: "#F2F6F6";
-  --color-secondary1: "#6b7280";
-  --color-blackText: "#272b41";
+  --color-primary: #09e5ab;
+  --color-primary1: #1ca39c;
+  --color-secondary: #F2F6F6;
+  --color-secondary1: #6b7280;
+  --color-blackText: #272b41;
 }
 
 @theme inline {

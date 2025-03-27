@@ -62,6 +62,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ClientLayout from "@/components/ClientLayout";
+import ContactIcons from "@/components/ContactIcons";
 
 export const metadata: Metadata = {
   title: "Jay Jinendra Health Care - Best Caregiver Services",
@@ -81,6 +82,8 @@ export default function RootLayout({
         <ClientLayout>
           <Header />
           <main>{children}</main>
+          <ContactIcons />
+
           <Footer />
         </ClientLayout>
       </body>

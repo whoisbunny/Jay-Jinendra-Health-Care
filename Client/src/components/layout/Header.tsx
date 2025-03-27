@@ -73,10 +73,13 @@ const Header = () => {
             Book Now
           </button> */}
           {/* <li className="register-btn"> */}
-          <button className=" rounded-lg btn hover:cursor-pointer   hidden md:flex items-center  justify-center w-36">
+          <Link
+            href={"/book-caregiver"}
+            className=" rounded-lg btn hover:cursor-pointer   hidden md:flex items-center  justify-center w-36"
+          >
             <Phone className="w-6 h-6 mr-2" />
             <span className="flex">Book Now</span>
-          </button>
+          </Link>
           {/* </li> */}
         </nav>
       </div>
@@ -148,6 +151,16 @@ const Header = () => {
                 onClick={toggleMenu}
               >
                 Contact
+              </Link>
+            </li>
+            <li className="px-6 border-b pb-4">
+              <Link
+                href="/book-caregiver"
+                prefetch={true}
+                className="text-white text-[15px] font-[500]"
+                onClick={toggleMenu}
+              >
+                Book Caregiver
               </Link>
             </li>
           </ul>

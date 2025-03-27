@@ -135,7 +135,7 @@ const Footer = () => {
               Privacy Policy
             </Link>
             <span>|</span>
-            <Link href="/termsandconditions" className=" text-secondary1">
+            <Link href="/terms-and-conditions" className=" text-secondary1">
               Terms and Conditions
             </Link>
           </div>
