@@ -17,7 +17,7 @@ const TermsAndConditions: NextPage = () => {
               Terms and Conditions
             </h1>
             <p className="text-gray-700 mb-4">
-              Welcome to Jai Jinendra Healthcare! Please read our terms and
+              Welcome to Jay Jinendra Healthcare! Please read our terms and
               conditions carefully before using our caregiver booking services.
             </p>
 
@@ -39,7 +39,7 @@ const TermsAndConditions: NextPage = () => {
 
             <h2 className="text-xl font-semibold mt-6 mb-2">3. Liability</h2>
             <p className="text-gray-600">
-              Jai Jinendra Healthcare is not responsible for any medical
+              Jay Jinendra Healthcare is not responsible for any medical
               complications or service disputes arising from caregiver
               assignments.
             </p>
