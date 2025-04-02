@@ -1,5 +1,5 @@
 import React from "react";
-import { Phone, MessageCircle } from "lucide-react"; // Import icons from lucide-react
+import { Phone } from "lucide-react"; // Import icons from lucide-react
 import whatsAppIcon from "../public/images.png"
 import Image from "next/image";
 const ContactIcons = () => {
@@ -19,7 +19,6 @@ const ContactIcons = () => {
         className="text-green-500 text-xl  bg-white p-4 rounded-full shadow-lg"
       >
         <Image src={whatsAppIcon} alt="whatsapp us" className="w-8 h-8"/>
-        {/* <MessageCircle size={24} color="#25D366" /> Lucide-react Icon */}
       </a>
 
       {/* Phone Call Icon */}
