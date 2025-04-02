@@ -30,8 +30,8 @@ const Modal = ({
   const dispatch: AppDispatch = useDispatch();
 
   return (
-    <Dialog open={open} onOpenChange={(isOpen) => dispatch(setOpen(isOpen))}>
-      <DialogContent className={` ${className}`}>
+    <Dialog open={open} onOpenChange={(isOpen) => dispatch(setOpen(isOpen))} >
+      <DialogContent className={` bg-gray-100 dark:bg-gray-800 ${className}`}>
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
           <DialogDescription>{description}</DialogDescription>

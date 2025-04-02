@@ -55,7 +55,7 @@ export function DataTable<TData, TValue>({
   });
 
   return (
-    <Card className="">
+    <Card className=" bg-white dark:bg-gray-800">
       <CardHeader className="md:flex md:items-center md:justify-between gap-2">
         <h4 className="card-title">{title}</h4>
         <div className="  ">

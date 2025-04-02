@@ -1,10 +1,14 @@
+"use client";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "@/redux/store";
+import { loginAsync } from "@/redux/reducers/authReducer";
 
 const schema = z.object({
   email: z.string().email({ message: "Invalid email address" }),
@@ -16,8 +20,8 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 const LoginForm: React.FC = () => {
-  const navigate = useNavigate();
-
+  const dispatch: AppDispatch = useDispatch();
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -27,7 +31,14 @@ const LoginForm: React.FC = () => {
   });
 
   const onSubmit = (data: FormData) => {
-    navigate("/dashboard");
+    console.log(data);
+    dispatch(loginAsync(data)).then((action) => {
+      console.log(action);
+
+      if (loginAsync.fulfilled.match(action)) {
+        router.push("/dashboard");
+      }
+    });
   };
 
   return (

@@ -1,6 +1,7 @@
 import React from "react";
 import { Phone, MessageCircle } from "lucide-react"; // Import icons from lucide-react
-
+import whatsAppIcon from "../public/images.png"
+import Image from "next/image";
 const ContactIcons = () => {
   const phoneNumber = "+917801815082"; // Replace with your phone number
   const whatsappMessage =
@@ -17,15 +18,16 @@ const ContactIcons = () => {
         rel="noopener noreferrer"
         className="text-green-500 text-xl  bg-white p-4 rounded-full shadow-lg"
       >
-        <MessageCircle size={24} color="#25D366" /> {/* Lucide-react Icon */}
+        <Image src={whatsAppIcon} alt="whatsapp us" className="w-8 h-8"/>
+        {/* <MessageCircle size={24} color="#25D366" /> Lucide-react Icon */}
       </a>
 
       {/* Phone Call Icon */}
       <a
         href={`tel:${phoneNumber}`}
-        className="text-blue-500 text-xl  bg-white p-4 rounded-full shadow-lg"
+        className="text-blue-500 text-xl  p-4 rounded-full shadow-lg text-center bg-white flex justify-center items-center"
       >
-        <Phone size={24} color="#007BFF" /> {/* Lucide-react Icon */}
+        <Phone size={20} color="#007BFF" /> {/* Lucide-react Icon */}
       </a>
     </div>
   );

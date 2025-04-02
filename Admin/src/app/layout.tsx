@@ -1,20 +1,60 @@
+"use client";
+import {  Poppins } from "next/font/google";
+import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 import { SidebarProvider } from "@/components/ui/sidebar";
-// import { ModeToggle } from "@/components/mode-toggle";
 import { AppSidebar } from "@/components/app-sidebar";
-import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
-import { Outlet } from "react-router-dom";
+import { usePathname } from "next/navigation";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import ClientLayout from "@/components/ClientLayout";
 
-export default function Layout() {
-// { children }: { children: React.ReactNode }
+import { Provider } from "react-redux";
+import { store } from "@/redux/store";
+
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"], // Choose weights
+  variable: "--font-poppins", // CSS Variable for global usage
+});
+
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  const pathname = usePathname(); // Get the current route
+
+  const isLoginPage = pathname === "/"; // Check if the current route is "/"
+
   return (
-    <SidebarProvider>
-      <AppSidebar />
-      <main className=" h-screen w-full">
-        <Header />
-        <Outlet />
-        <Footer />
-      </main>
-    </SidebarProvider>
+    <html lang="en">
+      <body className={`${poppins.variable} ${poppins.variable} antialiased`}>
+        <SidebarProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+             <Provider store={store}>
+
+            {!isLoginPage && <AppSidebar />}
+            <div className="flex flex-col min-h-screen w-full">
+              <ClientLayout>
+                {!isLoginPage && <Header />}
+
+              <main className="min-h-screen bg-gray-100 dark:bg-gray-900">{children}</main>
+
+                {!isLoginPage && <Footer />}
+              </ClientLayout>
+            </div>
+             </Provider>
+          </ThemeProvider>
+        </SidebarProvider>
+      </body>
+    </html>
   );
 }
