@@ -28,7 +28,7 @@ import {
   fetchGeneralMasters,
 } from "@/redux/reducers/generalReducer";
 import { useEffect } from "react";
-import Modal from "../modal";
+import Modal from "@/components/modal"; // Update the path to the correct location of the Modal component
 
 const formSchema = z.object({
   generalName: z.string().min(2, "Name is required"),

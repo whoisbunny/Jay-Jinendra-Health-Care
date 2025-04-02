@@ -1,5 +1,7 @@
 "use client";
-import Modal from "../modal";
+
+
+import Modal from "@/components/modal"; // Update the path to the correct location of the Modal component
 
 import { handleModal } from "@/redux/reducers/layout";
 import { AppDispatch, RootState } from "@/redux/store";
