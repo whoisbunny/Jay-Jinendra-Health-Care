@@ -1,5 +1,5 @@
 "use client";
-import Modal from "@/components/modal";
+import Modal from "../modal";
 
 import { handleModal } from "@/redux/reducers/layout";
 import { AppDispatch, RootState } from "@/redux/store";

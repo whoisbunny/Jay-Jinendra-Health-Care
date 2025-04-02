@@ -1,5 +1,5 @@
 "use client";
-import Modal from "@/components/modal";
+
 import { handleGeneralModal } from "@/redux/reducers/layout";
 import { AppDispatch, RootState } from "@/redux/store";
 import { useDispatch, useSelector } from "react-redux";
@@ -28,6 +28,7 @@ import {
   fetchGeneralMasters,
 } from "@/redux/reducers/generalReducer";
 import { useEffect } from "react";
+import Modal from "../modal";
 
 const formSchema = z.object({
   generalName: z.string().min(2, "Name is required"),
